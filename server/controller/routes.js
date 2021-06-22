@@ -3,9 +3,9 @@ var path = require('path');
 
 
 const mysql = require('mysql');
-const databaseString =  process.env.LOCAL_DATABASE
+const databaseString = process.env.JAWSDB_URL || process.env.LOCAL_DATABASE
 const db = mysql.createConnection(databaseString);
-
+databaseConnection.connect();
 
 
 var router = express.Router();
